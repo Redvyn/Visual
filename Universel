@@ -1,1 +1,9 @@
-
+if game.PlaceId == 920587237 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/AdoptMe"))()
+elseif game.PlaceId == 127742093697776 then 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/PlantsVsBrainrots"))()
+elseif game.PlaceId == 126884695634066 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/GrowAGarden"))()
+else
+    game.Players.LocalPlayer:Kick("Game Not Supported")
+end
