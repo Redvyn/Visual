@@ -2,7 +2,6 @@ if game.PlaceId == 920587237 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/AdoptMe"))()
 elseif game.PlaceId == 127742093697776 then 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/PlantsVsBrainrots"))()
-else
 elseif game.PlaceId == 96342491571673 or game.PlaceId == 109983668079237 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/refs/heads/main/StealABrainrot"))()
 else
