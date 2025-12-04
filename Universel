@@ -3,13 +3,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/Ad
 elseif game.PlaceId == 127742093697776 then 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/PlantsVsBrainrots"))()
 elseif game.PlaceId == 96342491571673 or game.PlaceId == 109983668079237 then
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/refs/heads/main/StealABrainrot"))()
 game.StarterGui:SetCore("SendNotification", {
     Title = "Xware Spawner Key",
     Text = "176176",
     Duration = 1e6,
     Button1 = "Ok"
 })
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/refs/heads/main/StealABrainrot"))()
 else
     game.Players.LocalPlayer:Kick("Game Not Supported")
 end
