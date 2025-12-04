@@ -3,42 +3,32 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/Ad
 elseif game.PlaceId == 127742093697776 then 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/main/PlantsVsBrainrots"))()
 elseif game.PlaceId == 96342491571673 or game.PlaceId == 109983668079237 then
-local p="Xware"
-local exists=false
+local FileName = "Xware"
 
-if isfile and readfile and writefile then
-    if isfile(p) then
-        if readfile(p)=="true" then
-            exists=true
-        end
+local function FileExists()
+    return isfile and isfile(FileName)
+end
+
+local function HasActivated()
+    if FileExists() and readfile(FileName) == "true" then
+        return true
+    end
+    return false
+end
+
+if not HasActivated() then
+    game.StarterGui:SetCore("SendNotification",{
+        Title = "Xware Spawner Key",
+        Text = "176176",
+        Duration = 1e6,
+        Button1 = "Ok"
+    })
+    if writefile then
+        writefile(FileName,"true")
     end
 end
 
-local function run()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/refs/heads/main/StealABrainrot"))()
-end
-
-if exists then
-    run()
-else
-    game.StarterGui:SetCore("SendNotification",{
-        Title="Xware Spawner Key",
-        Text="176176",
-        Duration=1e6,
-        Button1="Ok"
-    })
-
-    task.spawn(function()
-        while true do
-            task.wait()
-            if game.GuiService.SelectedObject and game.GuiService.SelectedObject.Text=="Ok" then
-                run()
-                if writefile then writefile(p,"true") end
-                break
-            end
-        end
-    end)
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Redvyn/Visual/refs/heads/main/StealABrainrot"))()
 else
     game.Players.LocalPlayer:Kick("Game Not Supported")
 end
