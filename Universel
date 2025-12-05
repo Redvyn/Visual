@@ -19,7 +19,7 @@ end
 if not HasActivated() then
     game.StarterGui:SetCore("SendNotification",{
         Title = "Xware Spawner Key",
-        Text = "176176",
+        Text = "166862",
         Duration = 1e6,
         Button1 = "Ok"
     })
